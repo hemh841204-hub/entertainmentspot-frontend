@@ -110,7 +110,7 @@ export default function Breakout() {
           <span style={{ color: '#00d4ff' }}>Score: {score}</span>
           <span style={{ color: '#f72585' }}>Lives: {'❤️'.repeat(lives)}</span>
         </div>
-        <canvas ref={canvasRef} width={CW} height={CH} />
+        <canvas ref={canvasRef} width={CW} height={CH} style={{ maxWidth: '100%', height: 'auto' }} />
         {(gameOver || won || !stateRef.current?.running) && (
           <div style={{ marginTop: '1rem' }}>
             {gameOver && <p style={{ color: '#f72585', fontSize: '1.3rem' }}>Game Over!</p>}

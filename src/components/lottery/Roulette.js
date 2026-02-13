@@ -40,7 +40,7 @@ export default function Roulette() {
       <h2>🎡 Roulette</h2>
       <div className="tool-box" style={{ textAlign: 'center' }}>
         <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <input style={{ width: '200px' }} value={newItem} onChange={e => setNewItem(e.target.value)} placeholder="Add item" onKeyDown={e => e.key === 'Enter' && addItem()} />
+          <input style={{ width: '200px', maxWidth: '60%', flex: '1' }} value={newItem} onChange={e => setNewItem(e.target.value)} placeholder="Add item" onKeyDown={e => e.key === 'Enter' && addItem()} />
           <button className="btn" onClick={addItem}>Add</button>
         </div>
         <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1rem' }}>
@@ -50,9 +50,9 @@ export default function Roulette() {
             </span>
           ))}
         </div>
-        <div style={{ position: 'relative', display: 'inline-block' }}>
-          <div className="roulette-pointer">▼</div>
-          <svg ref={wheelRef} width="300" height="300" viewBox="0 0 300 300" style={{ transform: `rotate(${rotation}deg)`, transition: spinning ? 'transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99)' : 'none' }}>
+        <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', overflow: 'hidden' }}>
+          <div className="roulette-pointer" style={{ position: 'relative', top: 'auto', left: 'auto', transform: 'none', fontSize: '2rem', zIndex: 2, marginBottom: '-10px' }}>▼</div>
+          <svg ref={wheelRef} style={{ width: '100%', maxWidth: '300px', height: 'auto', transform: `rotate(${rotation}deg)`, transition: spinning ? 'transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99)' : 'none' }} viewBox="0 0 300 300">
             {items.map((item, i) => {
               const angle = 360 / items.length;
               const startAngle = i * angle - 90;

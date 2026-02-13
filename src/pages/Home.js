@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <>
       <div className="hero">
-        <div style={{ marginBottom: '0.8rem', fontSize: '1.6rem', fontFamily: 'Orbitron, sans-serif', fontWeight: 700, letterSpacing: '8px', color: '#00d4ff', textTransform: 'uppercase' }}>NTU-GLDP</div>
+        <div className="ntu-badge">NTU-GLDP</div>
         <h1>Entertainment Spot</h1>
         <p>Your one-stop destination for fun lottery tools and classic web games. Try your luck or challenge yourself!</p>
-        <div style={{ display: 'flex', gap: '1rem' }}>
-          <Link to="/lottery" className="btn">🎰 Lottery Tools</Link>
-          <Link to="/games" className="btn" style={{ background: 'linear-gradient(135deg, #f72585, #7c3aed)' }}>🎮 Games</Link>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <Link to="/lottery" className="btn" style={{ width: 'auto' }}>🎰 Lottery Tools</Link>
+          <Link to="/games" className="btn" style={{ background: 'linear-gradient(135deg, #f72585, #7c3aed)', width: 'auto' }}>🎮 Games</Link>
         </div>
       </div>
       <div className="grid">

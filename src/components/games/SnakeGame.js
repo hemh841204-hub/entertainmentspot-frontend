@@ -78,7 +78,7 @@ export default function SnakeGame() {
       <div className="tool-box" style={{ textAlign: 'center' }}>
         <p style={{ color: '#888', marginBottom: '0.5rem' }}>Use Arrow keys or WASD</p>
         <p style={{ color: '#00d4ff', fontSize: '1.2rem', marginBottom: '1rem' }}>Score: {score}</p>
-        <canvas ref={canvasRef} width={W*SIZE} height={H*SIZE} />
+        <canvas ref={canvasRef} width={W*SIZE} height={H*SIZE} style={{ maxWidth: '100%', height: 'auto' }} />
         {(gameOver || !started) && (
           <div style={{ marginTop: '1rem' }}>
             {gameOver && <p style={{ color: '#f72585', fontSize: '1.3rem', marginBottom: '0.5rem' }}>Game Over!</p>}

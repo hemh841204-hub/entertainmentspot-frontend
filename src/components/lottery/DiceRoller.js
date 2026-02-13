@@ -26,8 +26,8 @@ export default function DiceRoller() {
       <Link to="/lottery" className="back-btn">← Back</Link>
       <h2>🎲 Dice Roller</h2>
       <div className="tool-box" style={{ textAlign: 'center' }}>
-        <div style={{ marginBottom: '1rem' }}>
-          <label style={{ color: '#aaa', marginRight: '1rem' }}>Number of dice:</label>
+        <div style={{ marginBottom: '1rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '0.3rem' }}>
+          <label style={{ color: '#aaa', marginRight: '0.5rem', width: '100%', textAlign: 'center', marginBottom: '0.3rem' }}>Number of dice:</label>
           {[1,2,3,4,5,6].map(n => (
             <button key={n} className="btn" style={{ margin: '0.2rem', padding: '0.4rem 0.8rem', background: n === count ? 'linear-gradient(135deg, #00d4ff, #7c3aed)' : '#333' }} onClick={() => setCount(n)}>{n}</button>
           ))}
