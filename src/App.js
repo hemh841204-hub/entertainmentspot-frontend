@@ -14,11 +14,15 @@ import JigsawPuzzle from './components/games/JigsawPuzzle';
 import Breakout from './components/games/Breakout';
 import RandomGroup from './components/games/RandomGroup';
 import RandomOrder from './components/games/RandomOrder';
+import TopUp from './pages/paypal/TopUp';
+import OrderConfirm from './pages/paypal/OrderConfirm';
+import ResultRedirect from './pages/paypal/ResultRedirect';
+import OrderQuery from './pages/paypal/OrderQuery';
 
 function Navbar() {
   const loc = useLocation();
   const links = [
-    ['/', 'Home'], ['/lottery', 'Lottery'], ['/games', 'Games']
+    ['/', 'Home'], ['/lottery', 'Lottery'], ['/games', 'Games'], ['/paypal/topup', 'VIP']
   ];
   return (
     <nav className="navbar">
@@ -51,6 +55,10 @@ export default function App() {
         <Route path="/games/breakout" element={<Breakout />} />
         <Route path="/lottery/group" element={<RandomGroup />} />
         <Route path="/lottery/order" element={<RandomOrder />} />
+        <Route path="/paypal/topup" element={<TopUp />} />
+        <Route path="/paypal/confirm" element={<OrderConfirm />} />
+        <Route path="/paypal/result" element={<ResultRedirect />} />
+        <Route path="/paypal/query" element={<OrderQuery />} />
       </Routes>
     </>
   );

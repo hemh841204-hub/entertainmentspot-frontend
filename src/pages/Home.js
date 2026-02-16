@@ -26,6 +26,7 @@ export default function Home() {
           { icon: '🐍', title: 'Snake', desc: 'Classic snake game', to: '/games/snake' },
           { icon: '🧩', title: 'Puzzle', desc: 'Sliding tile puzzle', to: '/games/puzzle' },
           { icon: '🧱', title: 'Breakout', desc: 'Break all the bricks!', to: '/games/breakout' },
+          { icon: '💳', title: 'Member Top-up', desc: 'VIP membership plans (Test)', to: '/paypal/topup' },
         ].map(c => (
           <Link to={c.to} key={c.title} style={{ textDecoration: 'none' }}>
             <div className="card">
